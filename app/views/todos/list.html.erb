@@ -6,11 +6,11 @@
       <% end %>
     <% end %>
   </div>
-  <% @todos.each do |t| %>
-    <div class="col-md-6">
+  <div class="col-md-6">
+    <% @todos.each do |t| %>
       <% if t.completed == true %>
         <%= t.description%>
       <% end %>
     <% end %>
-   </div>
+  </div>
  </div>
