@@ -1,4 +1,4 @@
-
+<%= render 'todos/navbar' %>
 <div class="container">
   <%= link_to "Crear ", todos_new_path, class: 'btn btn-info' %>
   <br>
@@ -8,7 +8,8 @@
   <div class="well"><%= todo.description %> <br> <%= todo.completed %></div>
   <%= link_to "Show ", todo, class: 'btn btn-primary' %>
   <%= link_to "Edit ", edit_todo_path(todo), class: 'btn btn-success' %>
-  <%= link_to "destroy ", todo, method: :delete, class: 'btn btn-danger' %>
+  <%= link_to "Destroy ", todo, method: :delete, class: 'btn btn-danger' %>
+  <%= link_to "Completed ", complete_todo_path(todo), class: 'btn btn-warning' %>
   <% end %> <br>
 
 
