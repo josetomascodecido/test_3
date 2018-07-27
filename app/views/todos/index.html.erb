@@ -2,7 +2,7 @@
 <div class="container row">
   <div class="container col-md-7">
     <% @todos.each do |todo| %>
-    <h2>ToDo</h2>
+    <h2> Escrito Nº<%= todo.id %></h2>
     <div class="well"><%= todo.description %> <br> <%= todo.completed %></div>
     <%= link_to "Show ", todo, class: 'btn btn-primary' %>
     <%= link_to "Edit ", edit_todo_path(todo), class: 'btn btn-success' %>
