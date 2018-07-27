@@ -1,16 +1,27 @@
 <div class="row">
   <div class="col-md-6">
+    <h1>Pendientes</h1>
     <% @todos.each do |t| %>
-      <% if t.completed == false %>
-        <%= t.description%>
-      <% end %>
+    <% if t.completed == false %>
+    <div class="well caja row">
+      <div class="col-xs-12">
+        <p><%= t.description.capitalize!%></p>
+      </div>
+    </div>
+    <% end %>
     <% end %>
   </div>
-  <div class="col-md-6">
+
+  <div class="completados col-md-6">
+    <h1>Completados</h1>
     <% @todos.each do |t| %>
-      <% if t.completed == true %>
-        <%= t.description%>
-      <% end %>
+    <% if t.completed  %>
+    <div class="well caja row">
+      <div class="col-xs-12">
+        <p><%= t.description.capitalize!%></p>
+      </div>
+    </div>
+    <% end %>
     <% end %>
   </div>
  </div>
